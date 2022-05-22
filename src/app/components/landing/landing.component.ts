@@ -35,6 +35,10 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
   }
 
+  resetPage(){
+    window.location.reload()
+  }
+
   searchUser(): void{
     if (this.searchTerm.length < 2) {
       this.toastrService.warning('Please enter a longer search term');
@@ -51,7 +55,18 @@ export class LandingComponent implements OnInit {
     };
     this.isLoading = true;
 
-    this.subscriptions$.push(this.searchService.searchUsers(this?.searchTerm, this.start.toString(), this.itemsPerPage.toString()).subscribe(
+    this.fetchApiCall()
+  }
+
+  fetchApiCall(){
+
+    let filters = {
+      q: this?.searchTerm,
+      page: this.start.toString(),
+      per_page: this.itemsPerPage.toString()
+    }
+
+    this.subscriptions$.push(this.searchService.searchUsers(filters).subscribe(
       (response: ApiResponse) => {
         this.details = response;
           this.details.items.forEach(element => this.specificUserDetails(element.url || this.githubHome ));     

@@ -1,27 +1,13 @@
 # GithubUserSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+## Highlight something in your project that you thought was especially interesting or significant to your overall implementation.
 
-## Development server
+The "Details" component that displays the list of Github users is actually the most interesting part of my implementation. The sharing of data between parent and child components using @Input and @Output decorators allowed me practice my knowledge of reusable components and data transfer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Tell us about what you are most pleased or proud of with your implementation.
 
-## Code scaffolding
+The implementation of best practices - including lazy loading, unsubscribing from observables, application modularization are things I find pleasing in my application. However, what stands out for me is the "parent to child" and "child to parent" data sharing between the Landing and Details component. It brings to life a number of Angular practices that would be useful in standard production applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Given more time, what would the next feature or improvement you would like to add to your project?
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Given more time, I would upgrade the project to Angular v14 and test this implementation with "standalone components" and the new Inject function. I would also use skeleton loaders for the list items and implement a debounce on the search input.
