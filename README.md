@@ -6,7 +6,7 @@ The "Details" component that displays the list of Github users is actually the m
 
 ## Tell us about what you are most pleased or proud of with your implementation.
 
-The implementation of best practices - including lazy loading, unsubscribing from observables, application modularization are things I find pleasing in my application. However, what stands out for me is the "parent to child" and "child to parent" data sharing between the Landing and Details component. It brings to life a number of Angular practices that would be useful in standard production applications.
+The implementation of best practices - including lazy loading, unsubscribing from observables, application modularization are things I find pleasing in my application. However, what stands out for me is the overall code structure. The folders and files are properly named and arranged, the code written is at par with current coding standards and conventions in today's production applications.
 
 ## Given more time, what would the next feature or improvement you would like to add to your project?
 
