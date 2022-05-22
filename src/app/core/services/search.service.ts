@@ -15,19 +15,11 @@ constructor(
   private readonly http: HttpClient
 ) { }
 
-searchUsers(query?: string, page?: string, per_page?: string): Observable<ApiResponse>{
-  let params = new HttpParams();
-  if (!!query){
-    params = params.append('q', `${query}`)
-  }
-  if (!!page){
-    params = params.append('page', `${page}`)
-  }
-  if (!!per_page){
-    params = params.append('per_page', `${per_page}`)
-  }
+searchUsers(filters: any): Observable<ApiResponse>{
 
-  return this.http.get<ApiResponse>(`${environment.baseUrl}`, {params}
+  const query = new URLSearchParams(filters as any).toString()
+
+  return this.http.get<ApiResponse>(`${environment.baseUrl}?${query}`
     ).pipe(
       catchError(ErrorHandlers.handleApiError)
     )
